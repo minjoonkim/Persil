@@ -1,0 +1,2 @@
+# Ignore the design-assets directory (it could get really big)
+design_assets/
