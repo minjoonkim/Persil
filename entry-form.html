@@ -3,9 +3,52 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title></title>
+        <title>Entry Form</title>
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+        <style>
+            .entryText {
+                width: 200px;
+                display: block;
+            }
+
+            .entryLabel {
+                display: block;
+            }
+        </style>
+        <script>
+          $(function() {
+            $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+            //$( "#datepicker" ).datepicker( $.datepicker.regional[ "fr" ] );
+            $( "#datepicker" ).datepicker();
+          });
+        </script>
     </head>
     <body>
-        
+        <label for="first" class="entryLabel">First Name</label>
+        <input type="text" id="first" class="entryText" />
+
+        <label for="last" class="entryLabel">Last Name</label>
+        <input type="text" id="last" class="entryText" />
+
+        <label for="email" class="entryLabel">Email</label>
+        <input type="text" id="email" class="entryText" />
+
+        <label for="otherEmail" class="entryLabel">Other Email</label>
+        <input type="text" id="otherEmail" class="entryText" />
+
+        <label>Birth date:</label>
+        <input type="text" id="datepicker" />
+        <br/>
+
+        <input type="checkbox" id="chk1" />
+        <label for="chk1">Checkbox 1 text</label>
+        <br/>
+        <input type="checkbox" id="chk2" />
+        <label for="chk2">Checkbox 2 text</label>
+        <br/>
+
+        <input type="button" id="btnSubmit" class="persilButton" value="Submit" />
     </body>
 </html>
